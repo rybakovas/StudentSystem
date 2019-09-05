@@ -3,13 +3,12 @@ import pickle
 import os
 import sys
 import six
-import statistics
 from statistics import mean
 
 
 def login():
     user = input("Username: ")
-    passw = getpass.getpass("Password: ")
+    passw = input("Password: ")
     f = open("users.txt", "r")
     for line in f.readlines():
         us, pw = line.strip().split("|")
